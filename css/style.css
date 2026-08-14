@@ -156,7 +156,8 @@ textarea {
 
 #site-nav a,
 .availability,
-.menu-toggle {
+.menu-toggle,
+.language-toggle {
     font: 500 0.78rem var(--font-mono);
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -194,6 +195,34 @@ textarea {
     gap: 9px;
     color: var(--text);
     white-space: nowrap;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+}
+
+.language-toggle {
+    min-width: 50px;
+    height: 38px;
+    padding: 0 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    color: var(--lime);
+    background: rgba(200, 255, 61, 0.04);
+    border: 1px solid rgba(200, 255, 61, 0.3);
+    cursor: pointer;
+    transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.language-toggle:hover {
+    color: #0b0d0c;
+    background: var(--lime);
+    border-color: var(--lime);
 }
 
 .status-dot,

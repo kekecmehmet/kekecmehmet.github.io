@@ -28,7 +28,7 @@
 </head>
 
 <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main" data-i18n="skipToContent">Skip to content</a>
     <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
     <header class="site-header" id="site-header">
@@ -36,30 +36,35 @@
             <span>MK</span><sup>26</sup>
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-            <span>Menu</span><i class="fa-solid fa-bars" aria-hidden="true"></i>
+            <span data-menu-label>Menu</span><i class="fa-solid fa-bars" aria-hidden="true"></i>
         </button>
-        <nav id="site-nav" aria-label="Primary navigation">
-            <a href="#work">Work</a>
-            <a href="#experience">Experience</a>
-            <a href="#capabilities">Capabilities</a>
-            <a href="#contact">Contact</a>
+        <nav id="site-nav" aria-label="Primary navigation" data-i18n-aria-label="navAria">
+            <a href="#work" data-i18n="navWork">Work</a>
+            <a href="#experience" data-i18n="navExperience">Experience</a>
+            <a href="#capabilities" data-i18n="navCapabilities">Capabilities</a>
+            <a href="#contact" data-i18n="navContact">Contact</a>
         </nav>
-        <a class="availability" href="#contact">
-            <span class="status-dot" aria-hidden="true"></span>Ankara, Türkiye
-        </a>
+        <div class="header-actions">
+            <a class="availability" href="#contact">
+                <span class="status-dot" aria-hidden="true"></span>Ankara, Türkiye
+            </a>
+            <button class="language-toggle" type="button" aria-label="Switch to Turkish" title="Switch language">
+                <i class="fa-solid fa-language" aria-hidden="true"></i><span>TR</span>
+            </button>
+        </div>
     </header>
 
     <main id="main">
         <section class="hero" id="home">
             <div class="hero-copy">
-                <p class="eyebrow"><span>01</span> Software engineering · research · systems</p>
-                <h1>Software engineering across <em>robotics</em>, <em>autonomous systems</em>, and <em>AI</em>.</h1>
-                <p class="hero-intro">I am a Computer Engineering student at METU. My work includes robotics,
+                <p class="eyebrow" data-i18n-html="heroEyebrow"><span>01</span> Software engineering · research · systems</p>
+                <h1 data-i18n-html="heroTitle">Software engineering across <em>robotics</em>, <em>autonomous systems</em>, and <em>AI</em>.</h1>
+                <p class="hero-intro" data-i18n="heroIntro">I am a Computer Engineering student at METU. My work includes robotics,
                     autonomous vehicles, human–robot interaction research, machine learning, and mathematical
                     optimization.</p>
                 <div class="hero-actions">
                     <a class="button button-secondary cv-button" href="assets/Mehmet-Kekec-CV.pdf"
-                        target="_blank">Download CV <i class="fa-solid fa-file-pdf" aria-hidden="true"></i></a>
+                        target="_blank"><span data-i18n="downloadCv">Download CV</span> <i class="fa-solid fa-file-pdf" aria-hidden="true"></i></a>
                     <a class="button button-profile" href="https://www.linkedin.com/in/mehmet-kekec/" target="_blank"
                         rel="noreferrer" aria-label="LinkedIn profile"><i class="fa-brands fa-linkedin"
                             aria-hidden="true"></i><span>LinkedIn</span></a>
@@ -69,52 +74,52 @@
                 </div>
             </div>
 
-            <aside class="signal-panel" aria-label="Current focus and selected work">
+            <aside class="signal-panel" aria-label="Current focus and selected work" data-i18n-aria-label="panelAria">
                 <div class="panel-heading">
-                    <span>Current focus</span><span class="mono">ANK / TR</span>
+                    <span data-i18n="currentFocus">Current focus</span><span class="mono">ANK / TR</span>
                 </div>
                 <a class="current-role" href="#romer">
                     <span class="pulse" aria-hidden="true"></span>
                     <div>
-                        <p>Research Intern</p>
+                        <p data-i18n="researchIntern">Research Intern</p>
                         <strong>METU ROMER</strong>
-                        <span>HRI research · 17 sessions · 900 GB</span>
+                        <span data-i18n="hriSummary">HRI research · 17 sessions · 900 GB</span>
                     </div>
                     <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                 </a>
-                <p class="panel-section-label mono">Selected work</p>
+                <p class="panel-section-label mono" data-i18n="selectedWork">Selected work</p>
                 <div class="panel-links">
                     <a class="panel-link" href="#thy-optimization">
                         <span class="panel-index">OPT</span>
-                        <span><strong>Airline optimization</strong><small>Istanbul, TR · 1st place</small></span>
+                        <span><strong data-i18n="airlineOptimization">Airline optimization</strong><small data-i18n="thyShortcut">Istanbul, TR · 1st place</small></span>
                         <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                     </a>
                     <a class="panel-link" href="#alaz">
                         <span class="panel-index">AUTO</span>
-                        <span><strong>Autonomous vehicle</strong><small>RDW · Lelystad, NL · 4th place</small></span>
+                        <span><strong data-i18n="autonomousVehicle">Autonomous vehicle</strong><small data-i18n="alazShortcut">RDW · Lelystad, NL · 4th place</small></span>
                         <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                     </a>
                     <a class="panel-link" href="#immunotarget">
                         <span class="panel-index">ML</span>
-                        <span><strong>ImmunoTarget</strong><small>CENTURI · Marseille, FR · 2nd place</small></span>
+                        <span><strong>ImmunoTarget</strong><small data-i18n="immunoShortcut">CENTURI · Marseille, FR · 2nd place</small></span>
                         <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                     </a>
                 </div>
             </aside>
         </section>
 
-        <div class="ticker" aria-label="Focus areas">
+        <div class="ticker" aria-label="Focus areas" data-i18n-aria-label="focusAreasAria">
             <div>
-                <span>Software Engineering</span><i></i><span>Optimization</span><i></i><span>Autonomous Systems</span><i></i>
-                <span>Machine Learning</span><i></i><span>Research</span><i></i><span>Technical Leadership</span>
+                <span data-i18n="softwareEngineering">Software Engineering</span><i></i><span data-i18n="optimization">Optimization</span><i></i><span data-i18n="autonomousSystems">Autonomous Systems</span><i></i>
+                <span data-i18n="machineLearning">Machine Learning</span><i></i><span data-i18n="research">Research</span><i></i><span data-i18n="technicalLeadership">Technical Leadership</span>
             </div>
         </div>
 
         <section class="section work-section" id="work">
             <header class="section-heading">
-                <p class="eyebrow"><span>02</span> Selected work</p>
-                <h2>Selected projects.</h2>
-                <p>Optimization, autonomous systems, machine learning, and application development projects.</p>
+                <p class="eyebrow" data-i18n-html="workEyebrow"><span>02</span> Selected work</p>
+                <h2 data-i18n="selectedProjects">Selected projects.</h2>
+                <p data-i18n="selectedProjectsIntro">Optimization, autonomous systems, machine learning, and application development projects.</p>
             </header>
 
             <article class="featured-project project-card" id="thy-optimization">
@@ -122,27 +127,27 @@
                     target="_blank" aria-label="Open ODTÜ Ambale final presentation">
                     <img src="assets/project_thy.jpg"
                         alt="Mehmet Kekeç presenting the component graph of the airline optimization model at the TEKNOFEST final">
-                    <span class="media-action"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Final
-                        presentation</span>
+                    <span class="media-action"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
+                        <span data-i18n="finalPresentation">Final presentation</span></span>
                 </a>
                 <div class="project-content">
                     <div class="project-meta">
                         <span class="project-result"><span class="award organizer"><span class="organizer-logo"
-                                    aria-hidden="true"><img src="assets/teknofest-logo.png" alt=""></span><span>1st
-                                    place · TEKNOFEST 2026</span></span><span class="project-location"><i
+                                    aria-hidden="true"><img src="assets/teknofest-logo.png" alt=""></span><span
+                                    data-i18n="thyAward">1st place · TEKNOFEST 2026</span></span><span class="project-location"><i
                                     class="fa-solid fa-location-dot" aria-hidden="true"></i>Istanbul,
                                 Türkiye</span></span>
-                        <span>Jul–Aug 2026</span>
+                        <span data-i18n="thyDate">Jul–Aug 2026</span>
                     </div>
-                    <h3>Airline network optimization</h3>
-                    <p>Built an end-to-end mixed-integer optimization pipeline in a three-person team to improve
+                    <h3 data-i18n="thyTitle">Airline network optimization</h3>
+                    <p data-i18n="thyDescription">Built an end-to-end mixed-integer optimization pipeline in a three-person team to improve
                         Istanbul hub connections under capacity, aircraft rotation, regularity, and route-balance
                         constraints. Connected-component decomposition reduced the measured solve time from 102.6
                         minutes to 3.55 minutes on the same problem scope.</p>
                     <dl class="project-stats">
-                        <div><dt>28.93×</dt><dd>faster than monolithic</dd></div>
-                        <div><dt>30.35%</dt><dd>objective uplift</dd></div>
-                        <div><dt>4,712</dt><dd>selected connections</dd></div>
+                        <div><dt>28.93×</dt><dd data-i18n="fasterThanMonolithic">faster than monolithic</dd></div>
+                        <div><dt>30.35%</dt><dd data-i18n="objectiveUplift">objective uplift</dd></div>
+                        <div><dt>4,712</dt><dd data-i18n="selectedConnections">selected connections</dd></div>
                     </dl>
                     <ul class="tech-list"><li>Python</li><li>Pyomo</li><li>HiGHS</li><li>MIP</li><li>Decomposition</li></ul>
                 </div>
@@ -156,24 +161,25 @@
                             <a class="media-action"
                                 href="https://www.selfdrivingchallenge.nl/edition-2026/teams/team-alaz" target="_blank"
                                 rel="noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"
-                                    aria-hidden="true"></i> Team profile</a>
+                                    aria-hidden="true"></i> <span data-i18n="teamProfile">Team profile</span></a>
                             <a class="media-action" href="https://github.com/efekaanguler/alaz" target="_blank"
                                 rel="noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i>
-                                Repository</a>
+                                <span data-i18n="repository">Repository</span></a>
                         </div>
                     </div>
                     <div class="project-content">
                         <div class="project-meta">
                             <span class="project-result"><span class="award neutral organizer"><span
                                         class="organizer-mark organizer-mark-rdw" aria-hidden="true"><img
-                                            src="assets/rdw-self-driving-challenge.svg" alt=""></span><span>4th place ·
-                                        RDW</span></span><span class="project-location"><i
-                                        class="fa-solid fa-location-dot" aria-hidden="true"></i>Lelystad,
-                                    Netherlands</span></span>
-                            <span>2025–Present</span>
+                                            src="assets/rdw-self-driving-challenge.svg" alt=""></span><span
+                                        data-i18n="alazAward">4th place · RDW</span></span><span
+                                    class="project-location"><i class="fa-solid fa-location-dot"
+                                        aria-hidden="true"></i><span data-i18n="alazLocation">Lelystad,
+                                        Netherlands</span></span></span>
+                            <span data-i18n="alazDate">2025–Present</span>
                         </div>
-                        <h3>Alaz autonomous vehicle</h3>
-                        <p>Co-founded the team and led six software engineers across perception, planning, ROS 2,
+                        <h3 data-i18n="alazTitle">Alaz autonomous vehicle</h3>
+                        <p data-i18n="alazDescription">Co-founded the team and led six software engineers across perception, planning, ROS 2,
                             simulation, deployment, and CI/CD.</p>
                         <ul class="tech-list"><li>ROS 2</li><li>Autoware</li><li>YOLOv8</li><li>CARLA</li><li>Docker</li></ul>
                     </div>
@@ -184,20 +190,22 @@
                         href="https://github.com/CENTURI-Hackathon-for-Quantitative-Bio/immunotarget" target="_blank"
                         rel="noreferrer">
                         <img src="assets/project_immunotarget.jpg" alt="ImmunoTarget international hackathon team">
-                        <span class="media-action"><i class="fa-brands fa-github" aria-hidden="true"></i> Repository</span>
+                        <span class="media-action"><i class="fa-brands fa-github" aria-hidden="true"></i> <span
+                                data-i18n="repository">Repository</span></span>
                     </a>
                     <div class="project-content">
                         <div class="project-meta">
                             <span class="project-result"><span class="award neutral organizer"><span
                                         class="organizer-mark organizer-mark-centuri" aria-hidden="true"><img
-                                            src="assets/centuri-logo.png" alt=""></span><span>2nd place ·
-                                        CENTURI</span></span><span class="project-location"><i
-                                        class="fa-solid fa-location-dot" aria-hidden="true"></i>Marseille,
-                                    France</span></span>
-                            <span>Jun 2026</span>
+                                            src="assets/centuri-logo.png" alt=""></span><span
+                                        data-i18n="immunoAward">2nd place · CENTURI</span></span><span
+                                    class="project-location"><i class="fa-solid fa-location-dot"
+                                        aria-hidden="true"></i><span data-i18n="immunoLocation">Marseille,
+                                        France</span></span></span>
+                            <span data-i18n="immunoDate">Jun 2026</span>
                         </div>
                         <h3>ImmunoTarget</h3>
-                        <p>Built a T-cell receptor embedding pipeline in a six-person international team during a
+                        <p data-i18n="immunoDescription">Built a T-cell receptor embedding pipeline in a six-person international team during a
                             three-day sprint, leading high-dimensional data visualization.</p>
                         <ul class="tech-list"><li>Deep Learning</li><li>PCA</li><li>UMAP</li><li>t-SNE</li><li>Bioinformatics</li></ul>
                     </div>
@@ -207,7 +215,8 @@
                     <a class="project-media" href="https://github.com/kekecmehmet/Foodage" target="_blank"
                         rel="noreferrer">
                         <img src="assets/project_foodage.png" alt="Foodage sustainable food planning application">
-                        <span class="media-action"><i class="fa-brands fa-github" aria-hidden="true"></i> Repository</span>
+                        <span class="media-action"><i class="fa-brands fa-github" aria-hidden="true"></i> <span
+                                data-i18n="repository">Repository</span></span>
                     </a>
                     <div class="project-content">
                         <div class="project-meta"><span class="organizer"><span
@@ -215,7 +224,7 @@
                                         src="assets/solution-challenge-mark.png" alt=""></span><span>Google Solution
                                     Challenge</span></span><span>2023–2024</span></div>
                         <h3>Foodage</h3>
-                        <p>Led a sustainable food-planning app that predicts meal quantities from historical demand
+                        <p data-i18n="foodageDescription">Led a sustainable food-planning app that predicts meal quantities from historical demand
                             and supports user-provided datasets and multiple languages.</p>
                         <ul class="tech-list"><li>TensorFlow</li><li>Flutter</li><li>Data Import</li><li>Product Design</li></ul>
                     </div>
@@ -225,26 +234,26 @@
 
         <section class="section experience-section" id="experience">
             <header class="section-heading narrow">
-                <p class="eyebrow"><span>03</span> Experience</p>
-                <h2>Research, technical teams, and communities.</h2>
+                <p class="eyebrow" data-i18n-html="experienceEyebrow"><span>03</span> Experience</p>
+                <h2 data-i18n="experienceTitle">Research, technical teams, and communities.</h2>
             </header>
             <div class="timeline">
                 <article class="timeline-item" id="romer">
-                    <div class="timeline-date mono">JAN 2026 — NOW</div>
+                    <div class="timeline-date mono" data-i18n="romerDate">JAN 2026 — NOW</div>
                     <div class="timeline-copy">
-                        <p class="organization">METU Robotics and Artificial Intelligence Center</p>
-                        <h3>Research Intern <span>Previously Undergraduate Researcher</span></h3>
-                        <p>Operate synchronized multimodal recording environments in a three-person research team.
+                        <p class="organization" data-i18n="romerOrganization">METU Robotics and Artificial Intelligence Center</p>
+                        <h3 data-i18n-html="romerRole">Research Intern <span>Previously Undergraduate Researcher</span></h3>
+                        <p data-i18n="romerDescription">Operate synchronized multimodal recording environments in a three-person research team.
                             Collected 900 GB across 17 sessions totaling 3.5 hours and developed a gaze-and-pose taxonomy
                             for upcoming human–robot interaction analysis.</p>
                     </div>
                 </article>
                 <article class="timeline-item">
-                    <div class="timeline-date mono">OCT 2023 — JUN 2026</div>
+                    <div class="timeline-date mono" data-i18n="gdgDate">OCT 2023 — JUN 2026</div>
                     <div class="timeline-copy">
                         <p class="organization">GDG on Campus METU</p>
-                        <h3>Director of Technical Affairs <span>Previously Assistant AI/ML Team Lead</span></h3>
-                        <p>Built and led a 30–40-member active technical contributor pool, expanded unique community
+                        <h3 data-i18n-html="gdgRole">Director of Technical Affairs <span>Previously Assistant AI/ML Team Lead</span></h3>
+                        <p data-i18n="gdgDescription">Built and led a 30–40-member active technical contributor pool, expanded unique community
                             reach to 400+ members, and coordinated programs issuing 200+ certificates.</p>
                     </div>
                 </article>
@@ -253,42 +262,42 @@
 
         <section class="section capabilities-section" id="capabilities">
             <header class="section-heading">
-                <p class="eyebrow"><span>04</span> Capabilities</p>
-                <h2>Technical focus areas.</h2>
+                <p class="eyebrow" data-i18n-html="capabilitiesEyebrow"><span>04</span> Capabilities</p>
+                <h2 data-i18n="capabilitiesTitle">Technical focus areas.</h2>
             </header>
             <div class="capability-grid">
-                <article><span class="cap-number mono">01</span><h3>Software Engineering</h3><p>Python, C++, Linux, Git/GitHub, Docker, algorithms, data structures, CI/CD.</p></article>
-                <article><span class="cap-number mono">02</span><h3>Optimization</h3><p>Pyomo, HiGHS, mixed-integer programming, graph decomposition, validation pipelines.</p></article>
-                <article><span class="cap-number mono">03</span><h3>Autonomous Systems</h3><p>ROS 2, Autoware, CARLA, Lanelet2, path planning, mission control, deployment.</p></article>
-                <article><span class="cap-number mono">04</span><h3>AI & Research</h3><p>PyTorch, TensorFlow, YOLO, OpenCV, multimodal data, PCA, UMAP, t-SNE.</p></article>
+                <article><span class="cap-number mono">01</span><h3 data-i18n="softwareEngineering">Software Engineering</h3><p data-i18n="softwareEngineeringDetails">Python, C++, Linux, Git/GitHub, Docker, algorithms, data structures, CI/CD.</p></article>
+                <article><span class="cap-number mono">02</span><h3 data-i18n="optimization">Optimization</h3><p data-i18n="optimizationDetails">Pyomo, HiGHS, mixed-integer programming, graph decomposition, validation pipelines.</p></article>
+                <article><span class="cap-number mono">03</span><h3 data-i18n="autonomousSystems">Autonomous Systems</h3><p data-i18n="autonomousSystemsDetails">ROS 2, Autoware, CARLA, Lanelet2, path planning, mission control, deployment.</p></article>
+                <article><span class="cap-number mono">04</span><h3 data-i18n="aiResearch">AI & Research</h3><p data-i18n="aiResearchDetails">PyTorch, TensorFlow, YOLO, OpenCV, multimodal data, PCA, UMAP, t-SNE.</p></article>
             </div>
         </section>
 
         <section class="section education-section" aria-labelledby="education-title">
-            <p class="eyebrow"><span>05</span> Education</p>
+            <p class="eyebrow" data-i18n-html="educationEyebrow"><span>05</span> Education</p>
             <div class="education-row">
-                <div><h2 id="education-title">Middle East Technical University</h2><p>B.Sc. in Computer Engineering</p></div>
-                <div class="education-meta"><span>Oct 2023 — Present</span><strong>CGPA 3.13 / 4.00</strong></div>
+                <div><h2 id="education-title" data-i18n="university">Middle East Technical University</h2><p data-i18n="degree">B.Sc. in Computer Engineering</p></div>
+                <div class="education-meta"><span data-i18n="educationDate">Oct 2023 — Present</span><strong data-i18n="cgpa">CGPA 3.13 / 4.00</strong></div>
             </div>
         </section>
 
         <section class="contact-section" id="contact">
-            <p class="eyebrow"><span>06</span> Contact</p>
-            <h2>Get in touch.</h2>
-            <p>For software engineering opportunities, project discussions, or research collaboration.</p>
+            <p class="eyebrow" data-i18n-html="contactEyebrow"><span>06</span> Contact</p>
+            <h2 data-i18n="contactTitle">Get in touch.</h2>
+            <p data-i18n="contactIntro">For software engineering opportunities, project discussions, or research collaboration.</p>
             <a class="contact-email" href="mailto:kekecmehmett@gmail.com">kekecmehmett@gmail.com <i
                     class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
         </section>
     </main>
 
     <footer class="site-footer">
-        <div><strong>Mehmet Kekeç</strong><span>Software Engineer · Ankara, Türkiye</span></div>
+        <div><strong>Mehmet Kekeç</strong><span data-i18n="footerRole">Software Engineer · Ankara, Türkiye</span></div>
         <div class="footer-links">
             <a href="https://www.linkedin.com/in/mehmet-kekec/" target="_blank" rel="noreferrer">LinkedIn</a>
             <a href="https://github.com/kekecmehmet" target="_blank" rel="noreferrer">GitHub</a>
             <a href="assets/Mehmet-Kekec-CV.pdf" target="_blank">CV</a>
         </div>
-        <p>© <span id="year">2026</span> · Designed and developed by Mehmet Kekeç.</p>
+        <p data-i18n-html="footerCredit">© <span id="year">2026</span> · Designed and developed by Mehmet Kekeç.</p>
     </footer>
 
     <script src="js/script.js"></script>
