@@ -625,6 +625,10 @@ main {
     width: 24px;
 }
 
+.organizer-mark-solution {
+    width: 42px;
+}
+
 .organizer-mark img {
     width: auto;
     max-width: none;
