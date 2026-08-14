@@ -604,6 +604,33 @@ main {
     color: var(--cyan);
 }
 
+.organizer {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.organizer-mark {
+    height: 23px;
+    display: inline-block;
+    flex: 0 0 auto;
+    overflow: hidden;
+}
+
+.organizer-mark-rdw {
+    width: 22px;
+}
+
+.organizer-mark-centuri {
+    width: 24px;
+}
+
+.organizer-mark img {
+    width: auto;
+    max-width: none;
+    height: 100%;
+}
+
 .project-result {
     display: flex;
     flex-direction: column;
