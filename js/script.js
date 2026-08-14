@@ -1,57 +1,53 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Navbar Scroll Effect
-    const navbar = document.getElementById('navbar');
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
+    const header = document.getElementById('site-header');
+    const nav = document.getElementById('site-nav');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const progress = document.querySelector('.scroll-progress span');
+    const navLinks = [...nav.querySelectorAll('a[href^="#"]')];
+    const sections = navLinks
+        .map((link) => document.querySelector(link.getAttribute('href')))
+        .filter(Boolean);
 
-    // 2. Reveal Animations on Scroll
-    const revealElements = document.querySelectorAll('.reveal');
-
-    const revealOptions = {
-        threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px"
+    const closeMenu = () => {
+        nav.classList.remove('is-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.querySelector('span').textContent = 'Menu';
+        menuToggle.querySelector('i').className = 'fa-solid fa-bars';
     };
 
-    const revealOnScroll = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                return;
-            } else {
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, revealOptions);
-
-    revealElements.forEach(el => {
-        revealOnScroll.observe(el);
+    menuToggle.addEventListener('click', () => {
+        const willOpen = !nav.classList.contains('is-open');
+        nav.classList.toggle('is-open', willOpen);
+        menuToggle.setAttribute('aria-expanded', String(willOpen));
+        menuToggle.querySelector('span').textContent = willOpen ? 'Close' : 'Menu';
+        menuToggle.querySelector('i').className = willOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
     });
 
-    // 3. Smooth Scrolling for Navigation Links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                // Adjust for fixed navbar
-                const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - 80;
-                
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
-            }
-        });
+    navLinks.forEach((link) => link.addEventListener('click', closeMenu));
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 980) closeMenu();
     });
+
+    const updateScrollState = () => {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const ratio = scrollable > 0 ? window.scrollY / scrollable : 0;
+        progress.style.width = `${Math.min(100, Math.max(0, ratio * 100))}%`;
+        header.classList.toggle('is-scrolled', window.scrollY > 24);
+
+        let current = '';
+        sections.forEach((section) => {
+            if (window.scrollY >= section.offsetTop - 180) current = `#${section.id}`;
+        });
+        navLinks.forEach((link) => {
+            const isCurrent = link.getAttribute('href') === current;
+            if (isCurrent) link.setAttribute('aria-current', 'true');
+            else link.removeAttribute('aria-current');
+        });
+    };
+
+    window.addEventListener('scroll', updateScrollState, { passive: true });
+    updateScrollState();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
 });
