@@ -270,6 +270,33 @@ main {
     margin-top: 36px;
 }
 
+.social-shortcuts {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.social-shortcuts a {
+    min-height: 42px;
+    padding: 0 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid var(--line);
+    font: 500 0.72rem var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.social-shortcuts a:hover {
+    color: var(--lime);
+    border-color: rgba(200, 255, 61, 0.45);
+    background: rgba(200, 255, 61, 0.05);
+}
+
 .button {
     min-height: 50px;
     padding: 0 20px;
@@ -462,6 +489,10 @@ main {
     min-height: 540px;
 }
 
+.presentation-photo img {
+    object-position: 38% center;
+}
+
 .project-media {
     min-height: 320px;
     display: block;
@@ -610,6 +641,30 @@ main {
 .compact-project .project-content > p {
     margin-bottom: 28px;
     font-size: 0.9rem;
+}
+
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: -10px 0 24px;
+}
+
+.project-links a {
+    padding: 8px 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text);
+    border: 1px solid var(--line);
+    font: 500 0.65rem var(--font-mono);
+    text-transform: uppercase;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.project-links a:hover {
+    color: var(--cyan);
+    border-color: rgba(112, 231, 255, 0.45);
 }
 
 .experience-section .narrow {
@@ -849,6 +904,8 @@ main {
     .hero-intro { font-size: 1rem; }
     .hero-actions { flex-direction: column; align-items: stretch; }
     .button { width: 100%; }
+    .social-shortcuts { display: grid; grid-template-columns: 1fr 1fr; }
+    .social-shortcuts a { justify-content: center; }
     .ticker div { justify-content: flex-start; }
     .ticker span:nth-of-type(n + 4), .ticker i:nth-of-type(n + 4) { display: none; }
     .section { padding: 94px 0; }
