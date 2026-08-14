@@ -565,6 +565,24 @@ main {
     letter-spacing: 0.05em;
 }
 
+.media-actions {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.media-actions .media-action {
+    position: static;
+}
+
+.media-actions .media-action:hover {
+    background: var(--text);
+}
+
 .project-content {
     padding: clamp(28px, 4vw, 54px);
     display: flex;
@@ -669,30 +687,6 @@ main {
 .compact-project .project-content > p {
     margin-bottom: 28px;
     font-size: 0.9rem;
-}
-
-.project-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: -10px 0 24px;
-}
-
-.project-links a {
-    padding: 8px 10px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--text);
-    border: 1px solid var(--line);
-    font: 500 0.65rem var(--font-mono);
-    text-transform: uppercase;
-    transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-.project-links a:hover {
-    color: var(--cyan);
-    border-color: rgba(112, 231, 255, 0.45);
 }
 
 .experience-section .narrow {
