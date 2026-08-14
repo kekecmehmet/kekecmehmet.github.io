@@ -69,24 +69,37 @@
                 </div>
             </div>
 
-            <aside class="signal-panel" aria-label="Current role and selected figures">
+            <aside class="signal-panel" aria-label="Current focus and selected work">
                 <div class="panel-heading">
-                    <span>Current role</span><span class="mono">ANK / TR</span>
+                    <span>Current focus</span><span class="mono">ANK / TR</span>
                 </div>
-                <div class="current-role">
+                <a class="current-role" href="#romer">
                     <span class="pulse" aria-hidden="true"></span>
                     <div>
                         <p>Research Intern</p>
                         <strong>METU ROMER</strong>
+                        <span>HRI research · 17 sessions · 900 GB</span>
                     </div>
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                <p class="panel-section-label mono">Selected work</p>
+                <div class="panel-links">
+                    <a class="panel-link" href="#thy-optimization">
+                        <span class="panel-index">OPT</span>
+                        <span><strong>Airline optimization</strong><small>TEKNOFEST 2026 · Winner</small></span>
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                    <a class="panel-link" href="#alaz">
+                        <span class="panel-index">AUTO</span>
+                        <span><strong>Autonomous vehicle</strong><small>RDW Challenge · 4th place</small></span>
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                    <a class="panel-link" href="#immunotarget">
+                        <span class="panel-index">ML</span>
+                        <span><strong>ImmunoTarget</strong><small>CENTURI Hackathon · 2nd place</small></span>
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
                 </div>
-                <div class="metric-grid">
-                    <div class="metric"><strong>1<sup>st</sup></strong><span>TEKNOFEST 2026</span></div>
-                    <div class="metric"><strong>900<small>GB</small></strong><span>Research data</span></div>
-                    <div class="metric"><strong>4<sup>th</sup></strong><span>RDW Challenge</span></div>
-                    <div class="metric"><strong>400<small>+</small></strong><span>Community reach</span></div>
-                </div>
-                <div class="panel-footer mono"><span>PYTHON</span><span>C++</span><span>ROS 2</span><span>PYOMO</span></div>
             </aside>
         </section>
 
@@ -104,7 +117,7 @@
                 <p>Optimization, autonomous systems, machine learning, and application development projects.</p>
             </header>
 
-            <article class="featured-project project-card">
+            <article class="featured-project project-card" id="thy-optimization">
                 <a class="project-media presentation-photo" href="assets/ODTU-Ambale-Final-Presentation.pdf"
                     target="_blank" aria-label="Open ODTÜ Ambale final presentation">
                     <img src="assets/project_thy.jpg"
@@ -129,7 +142,7 @@
             </article>
 
             <div class="project-grid">
-                <article class="project-card compact-project">
+                <article class="project-card compact-project" id="alaz">
                     <a class="project-media" href="https://www.selfdrivingchallenge.nl/edition-2026/teams/team-alaz"
                         target="_blank" rel="noreferrer">
                         <img src="assets/project_alaz.png" alt="Alaz autonomous vehicle software interface">
@@ -152,7 +165,7 @@
                     </div>
                 </article>
 
-                <article class="project-card compact-project">
+                <article class="project-card compact-project" id="immunotarget">
                     <a class="project-media"
                         href="https://github.com/CENTURI-Hackathon-for-Quantitative-Bio/immunotarget" target="_blank"
                         rel="noreferrer">
@@ -191,7 +204,7 @@
                 <h2>Research, technical teams, and communities.</h2>
             </header>
             <div class="timeline">
-                <article class="timeline-item">
+                <article class="timeline-item" id="romer">
                     <div class="timeline-date mono">JAN 2026 — NOW</div>
                     <div class="timeline-copy">
                         <p class="organization">METU Robotics and Artificial Intelligence Center</p>

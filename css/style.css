@@ -325,7 +325,6 @@ main {
 }
 
 .panel-heading,
-.panel-footer,
 .project-meta {
     display: flex;
     align-items: center;
@@ -343,10 +342,19 @@ main {
 }
 
 .current-role {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
     gap: 16px;
-    padding: 28px 4px;
+    margin: 8px 0 22px;
+    padding: 20px 14px;
+    border: 1px solid transparent;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.current-role:hover {
+    background: rgba(200, 255, 61, 0.035);
+    border-color: rgba(200, 255, 61, 0.22);
 }
 
 .pulse {
@@ -362,51 +370,77 @@ main {
 }
 
 .current-role strong {
+    display: block;
     font-size: 1.12rem;
 }
 
-.metric-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.current-role div > span {
+    display: block;
+    margin-top: 3px;
+    color: var(--muted);
+    font: 500 0.62rem var(--font-mono);
+}
+
+.current-role > i,
+.panel-link > i {
+    color: var(--muted);
+    font-size: 0.72rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.current-role:hover > i,
+.panel-link:hover > i {
+    color: var(--lime);
+    transform: translateX(4px);
+}
+
+.panel-section-label {
+    margin: 0 3px 10px;
+    color: var(--muted);
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.panel-links {
     border: 1px solid var(--line);
 }
 
-.metric {
-    min-height: 122px;
-    padding: 18px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.panel-link {
+    min-height: 78px;
+    padding: 14px 16px;
+    display: grid;
+    grid-template-columns: 42px 1fr auto;
+    align-items: center;
+    gap: 12px;
+    transition: background 0.2s ease;
 }
 
-.metric:nth-child(odd) {
-    border-right: 1px solid var(--line);
+.panel-link + .panel-link {
+    border-top: 1px solid var(--line);
 }
 
-.metric:nth-child(-n + 2) {
-    border-bottom: 1px solid var(--line);
+.panel-link:hover {
+    background: var(--surface-2);
 }
 
-.metric strong {
-    font-size: 2rem;
-    line-height: 1;
-    letter-spacing: -0.05em;
-}
-
-.metric sup,
-.metric small {
+.panel-index {
     color: var(--lime);
-    font: 500 0.65rem var(--font-mono);
-    letter-spacing: 0;
+    font: 500 0.64rem var(--font-mono);
+    letter-spacing: 0.04em;
 }
 
-.metric span {
-    color: var(--muted);
-    font-size: 0.72rem;
+.panel-link strong,
+.panel-link small {
+    display: block;
 }
 
-.panel-footer {
-    padding: 18px 3px 0;
+.panel-link strong {
+    font-size: 0.8rem;
+}
+
+.panel-link small {
+    margin-top: 2px;
     color: var(--muted);
     font-size: 0.62rem;
 }
