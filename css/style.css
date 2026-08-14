@@ -635,6 +635,19 @@ main {
     height: 100%;
 }
 
+.organizer-logo {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    flex: 0 0 auto;
+}
+
+.organizer-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 .project-result {
     display: flex;
     flex-direction: column;
