@@ -265,36 +265,30 @@ main {
 
 .hero-actions {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 12px;
     margin-top: 36px;
 }
 
-.social-shortcuts {
-    display: flex;
-    gap: 10px;
-    margin-top: 16px;
-}
-
-.social-shortcuts a {
-    min-height: 42px;
-    padding: 0 14px;
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-    color: var(--text);
+.button-profile {
+    min-width: 50px;
+    padding-inline: 15px;
     background: rgba(255, 255, 255, 0.025);
-    border: 1px solid var(--line);
-    font: 500 0.72rem var(--font-mono);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.035em;
     text-transform: uppercase;
-    letter-spacing: 0.04em;
-    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
-.social-shortcuts a:hover {
+.button-profile:hover {
     color: var(--lime);
     border-color: rgba(200, 255, 61, 0.45);
     background: rgba(200, 255, 61, 0.05);
+}
+
+.cv-button i {
+    color: var(--lime);
+    font-size: 1.05rem;
 }
 
 .button {
@@ -862,6 +856,10 @@ main {
     50% { box-shadow: 0 0 0 10px rgba(200, 255, 61, 0); }
 }
 
+@media (min-width: 981px) and (max-width: 1160px) {
+    .button-profile span { display: none; }
+}
+
 @media (max-width: 980px) {
     :root { --page: min(100% - 32px, 760px); }
 
@@ -904,8 +902,6 @@ main {
     .hero-intro { font-size: 1rem; }
     .hero-actions { flex-direction: column; align-items: stretch; }
     .button { width: 100%; }
-    .social-shortcuts { display: grid; grid-template-columns: 1fr 1fr; }
-    .social-shortcuts a { justify-content: center; }
     .ticker div { justify-content: flex-start; }
     .ticker span:nth-of-type(n + 4), .ticker i:nth-of-type(n + 4) { display: none; }
     .section { padding: 94px 0; }
