@@ -604,6 +604,25 @@ main {
     color: var(--cyan);
 }
 
+.project-result {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+}
+
+.project-location {
+    color: var(--muted);
+    font-size: 0.6rem;
+    letter-spacing: 0.025em;
+    text-transform: none;
+}
+
+.project-location i {
+    margin-right: 6px;
+    color: var(--lime);
+}
+
 .project-content h3 {
     margin: 28px 0 18px;
     font-size: clamp(1.7rem, 2.8vw, 3rem);
